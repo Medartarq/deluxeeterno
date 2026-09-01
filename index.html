@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sitio web académico responsive para Deluxe Eterno, desarrollado principalmente con Bootstrap 5.">
+  <title>Deluxe Eterno | Detalles y Floristería</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
+
+  <!-- NAVBAR -->
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#inicio">
+        <span class="brand-mark">DE</span>
+        <span>Deluxe Eterno</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="navbarContent" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-light btn-sm px-3" href="#contacto">Hacer consulta</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="inicio" class="hero-section d-flex align-items-center">
+    <div class="container py-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="badge rounded-pill text-bg-light mb-3">Detalles • Floristería • Personalización</span>
+          <h1 class="display-4 fw-bold">Detalles que convierten momentos en recuerdos.</h1>
+          <p class="lead mt-3 mb-4">
+            Propuesta académica de sitio web responsive para centralizar los productos,
+            servicios y canales de contacto de Deluxe Eterno.
+          </p>
+          <div class="d-flex flex-column flex-sm-row gap-3">
+            <a href="#productos" class="btn btn-primary btn-lg px-4">
+              <i class="bi bi-gift me-2"></i>Ver productos
+            </a>
+            <a href="#contacto" class="btn btn-outline-dark btn-lg px-4">
+              <i class="bi bi-chat-dots me-2"></i>Contactar
+            </a>
+          </div>
+          <div class="row row-cols-3 g-3 mt-4 small text-center text-sm-start">
+            <div class="col"><strong class="d-block fs-5">100%</strong>Responsive</div>
+            <div class="col"><strong class="d-block fs-5">Bootstrap</strong>Framework principal</div>
+            <div class="col"><strong class="d-block fs-5">Mobile First</strong>Enfoque</div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-card shadow-lg">
+            <img src="assets/hero.svg" class="img-fluid w-100" alt="Ilustración de regalos y flores">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CATEGORÍAS -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-kicker">Categorías principales</span>
+        <h2 class="fw-bold">Encuentra el detalle ideal</h2>
+        <p class="text-secondary mx-auto section-subtitle">
+          Una estructura clara para que el usuario llegue rápidamente a lo que busca.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <article class="card category-card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <div class="icon-circle mx-auto mb-3"><i class="bi bi-flower1"></i></div>
+              <h3 class="h5">Flores</h3>
+              <p class="text-secondary mb-0">Naturales, eternas y arreglos especiales.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <article class="card category-card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <div class="icon-circle mx-auto mb-3"><i class="bi bi-cup-hot"></i></div>
+              <h3 class="h5">Desayunos sorpresa</h3>
+              <p class="text-secondary mb-0">Preparados a pedido para ocasiones especiales.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <article class="card category-card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <div class="icon-circle mx-auto mb-3"><i class="bi bi-box2-heart"></i></div>
+              <h3 class="h5">Boxes</h3>
+              <p class="text-secondary mb-0">Cajas personalizadas y combinaciones temáticas.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <article class="card category-card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <div class="icon-circle mx-auto mb-3"><i class="bi bi-stars"></i></div>
+              <h3 class="h5">Regalos personalizados</h3>
+              <p class="text-secondary mb-0">Detalles creados según persona y ocasión.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="assets/about.svg" class="img-fluid rounded-4 shadow-sm" alt="Ilustración de floristería y regalos">
+        </div>
+        <div class="col-lg-6">
+          <span class="section-kicker">Nosotros</span>
+          <h2 class="fw-bold mb-3">Una tienda virtual de Trujillo</h2>
+          <p>
+            Deluxe Eterno se presenta públicamente como una tienda virtual especializada en
+            detalles y floristería. Su oferta incluye productos personalizados, flores,
+            desayunos sorpresa y opciones para diferentes celebraciones.
+          </p>
+          <p class="text-secondary">
+            Esta propuesta web busca reunir en un solo espacio la información que actualmente
+            se encuentra distribuida entre redes sociales, Linktree y catálogos externos.
+          </p>
+
+          <div class="accordion mt-4" id="aboutAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#vision">
+                  Visión propuesta
+                </button>
+              </h3>
+              <div id="vision" class="accordion-collapse collapse show" data-bs-parent="#aboutAccordion">
+                <div class="accordion-body">
+                  Ser una tienda de detalles y floristería reconocida en Trujillo por la creatividad,
+                  variedad y personalización de sus productos, fortaleciendo progresivamente su presencia digital.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mision">
+                  Misión propuesta
+                </button>
+              </h3>
+              <div id="mision" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+                <div class="accordion-body">
+                  Crear detalles, arreglos florales y regalos personalizados que permitan a los clientes
+                  expresar emociones y celebrar momentos especiales con una atención cercana y accesible.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="small text-secondary mt-3 mb-0">
+            * Misión y visión elaboradas como propuesta académica; no se presentan como declaraciones oficiales.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos" class="py-5 bg-soft">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-3 mb-4">
+        <div>
+          <span class="section-kicker">Productos</span>
+          <h2 class="fw-bold mb-0">Catálogo de muestra</h2>
+        </div>
+        <div class="btn-group flex-wrap" role="group" aria-label="Filtro visual de categorías">
+          <button class="btn btn-outline-primary active product-filter" data-filter="all">Todos</button>
+          <button class="btn btn-outline-primary product-filter" data-filter="flores">Flores</button>
+          <button class="btn btn-outline-primary product-filter" data-filter="desayunos">Desayunos</button>
+          <button class="btn btn-outline-primary product-filter" data-filter="regalos">Regalos</button>
+        </div>
+      </div>
+
+      <div class="row g-4" id="productGrid">
+        <div class="col-12 col-md-6 col-lg-4 product-item" data-category="flores">
+          <div class="card product-card h-100 border-0 shadow-sm">
+            <img src="assets/product-flower.svg" class="card-img-top" alt="Arreglo floral de muestra">
+            <div class="card-body">
+              <span class="badge text-bg-light mb-2">Flores</span>
+              <h3 class="h5">Arreglo floral personalizado</h3>
+              <p class="text-secondary">Tarjeta, flores y presentación adaptable a la ocasión.</p>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
+                      data-product="Arreglo floral personalizado">Ver detalle</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 product-item" data-category="desayunos">
+          <div class="card product-card h-100 border-0 shadow-sm">
+            <img src="assets/product-breakfast.svg" class="card-img-top" alt="Desayuno sorpresa de muestra">
+            <div class="card-body">
+              <span class="badge text-bg-light mb-2">Desayunos</span>
+              <h3 class="h5">Desayuno sorpresa</h3>
+              <p class="text-secondary">Propuesta visual para pedidos especiales y celebraciones.</p>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
+                      data-product="Desayuno sorpresa">Ver detalle</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 product-item" data-category="regalos">
+          <div class="card product-card h-100 border-0 shadow-sm">
+            <img src="assets/product-box.svg" class="card-img-top" alt="Box personalizado de muestra">
+            <div class="card-body">
+              <span class="badge text-bg-light mb-2">Regalos</span>
+              <h3 class="h5">Box personalizado</h3>
+              <p class="text-secondary">Caja temática con diferentes elementos y dedicatoria.</p>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#productModal"
+                      data-product="Box personalizado">Ver detalle</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-light border mt-4 mb-0">
+        <i class="bi bi-info-circle me-2"></i>
+        Los productos mostrados son ejemplos para el prototipo. No se han incorporado precios ni stock real.
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-kicker">Servicios</span>
+        <h2 class="fw-bold">¿Qué puede ofrecer el sitio?</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card h-100 p-4 rounded-4">
+            <i class="bi bi-grid-3x3-gap fs-2"></i>
+            <h3 class="h5 mt-3">Catálogo organizado</h3>
+            <p class="text-secondary mb-0">Agrupa categorías en una navegación uniforme y más fácil de explorar.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card h-100 p-4 rounded-4">
+            <i class="bi bi-phone fs-2"></i>
+            <h3 class="h5 mt-3">Experiencia responsive</h3>
+            <p class="text-secondary mb-0">La interfaz se adapta a móvil, tablet y escritorio con Bootstrap Grid.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card h-100 p-4 rounded-4">
+            <i class="bi bi-chat-heart fs-2"></i>
+            <h3 class="h5 mt-3">Contacto centralizado</h3>
+            <p class="text-secondary mb-0">Integra formularios y enlaces visibles hacia los canales de atención.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="galeria" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-kicker">Galería</span>
+        <h2 class="fw-bold">Presentación visual de la marca</h2>
+      </div>
+
+      <div id="galleryCarousel" class="carousel slide shadow-sm rounded-4 overflow-hidden">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/gallery-1.svg" class="d-block w-100" alt="Galería de regalos">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/gallery-2.svg" class="d-block w-100" alt="Galería de flores">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/gallery-3.svg" class="d-block w-100" alt="Galería de detalles">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span><span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span><span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <span class="section-kicker">Contacto</span>
+          <h2 class="fw-bold">Haz una consulta</h2>
+          <p class="text-secondary">
+            Formulario de demostración para el avance. No envía datos a un servidor.
+          </p>
+
+          <div class="list-group list-group-flush contact-list">
+            <div class="list-group-item px-0"><i class="bi bi-geo-alt me-2"></i>Trujillo, La Libertad, Perú</div>
+            <div class="list-group-item px-0"><i class="bi bi-instagram me-2"></i>Instagram</div>
+            <div class="list-group-item px-0"><i class="bi bi-facebook me-2"></i>Facebook</div>
+            <div class="list-group-item px-0"><i class="bi bi-tiktok me-2"></i>TikTok</div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <form id="contactForm" class="card border-0 shadow-sm p-4 p-md-5">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" id="name" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Teléfono</label>
+                <input type="tel" id="phone" class="form-control">
+              </div>
+              <div class="col-12">
+                <label for="email" class="form-label">Correo</label>
+                <input type="email" id="email" class="form-control" required>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea id="message" class="form-control" rows="4" required></textarea>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary btn-lg w-100" type="submit">
+                  <i class="bi bi-send me-2"></i>Enviar consulta
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div id="formAlert" class="alert alert-success mt-3 d-none" role="alert">
+            Consulta registrada en modo demostración.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-3 align-items-center">
+      <div>
+        <strong>Deluxe Eterno</strong>
+        <span class="text-white-50"> | Prototipo académico</span>
+      </div>
+      <div class="small text-white-50">
+        Marcos de Desarrollo Web • Bootstrap 5
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="productModalTitle">Detalle del producto</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-2">Este contenido es demostrativo para el avance del proyecto.</p>
+          <p class="text-secondary mb-0">
+            En una siguiente etapa pueden incorporarse fotografías reales, descripciones verificadas,
+            códigos y enlaces de contacto específicos.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <a href="#contacto" class="btn btn-primary" data-bs-dismiss="modal">Consultar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

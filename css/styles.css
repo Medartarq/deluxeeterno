@@ -1,0 +1,125 @@
+:root {
+  --de-primary: #9d4edd;
+  --de-primary-dark: #6f2dbd;
+  --de-secondary: #ff8fab;
+  --de-soft: #fff4f8;
+  --de-ink: #2b2130;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--de-ink);
+  padding-top: 72px;
+}
+
+#mainNav {
+  background: rgba(43, 33, 48, 0.96);
+  backdrop-filter: blur(10px);
+}
+
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--de-primary), var(--de-secondary));
+  color: white;
+  font-size: .85rem;
+}
+
+.hero-section {
+  min-height: calc(100vh - 72px);
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255,143,171,.35), transparent 28%),
+    radial-gradient(circle at 90% 10%, rgba(157,78,221,.22), transparent 30%),
+    linear-gradient(135deg, #fff 0%, #fff5f9 55%, #f8f1ff 100%);
+}
+
+.hero-card,
+.product-card,
+.category-card,
+.feature-card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.hero-card {
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.product-card:hover,
+.category-card:hover,
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.section-kicker {
+  display: inline-block;
+  color: var(--de-primary-dark);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .78rem;
+  margin-bottom: .4rem;
+}
+
+.section-subtitle {
+  max-width: 650px;
+}
+
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  background: var(--de-soft);
+  color: var(--de-primary-dark);
+}
+
+.bg-soft {
+  background: linear-gradient(180deg, #fff, #fff8fb);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--de-primary);
+  --bs-btn-border-color: var(--de-primary);
+  --bs-btn-hover-bg: var(--de-primary-dark);
+  --bs-btn-hover-border-color: var(--de-primary-dark);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--de-primary-dark);
+  --bs-btn-border-color: #cba7e7;
+  --bs-btn-hover-bg: var(--de-primary);
+  --bs-btn-hover-border-color: var(--de-primary);
+}
+
+.feature-card {
+  border: 1px solid #f0e2f4;
+  background: white;
+}
+
+.feature-card i {
+  color: var(--de-primary-dark);
+}
+
+.contact-list .list-group-item {
+  background: transparent;
+}
+
+footer {
+  background: #2b2130;
+  color: white;
+}
+
+@media (max-width: 575.98px) {
+  .hero-section .display-4 {
+    font-size: 2.35rem;
+  }
+}
