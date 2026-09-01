@@ -19,11 +19,6 @@ Construir un sitio web responsive para Deluxe Eterno utilizando Bootstrap como f
 - Footer.
 - Bootstrap Grid, cards, navbar, accordion, modal, carousel, buttons, forms y utilidades responsive.
 
-## Cómo ejecutar
-1. Descomprimir la carpeta.
-2. Abrir `index.html` en un navegador.
-3. Se necesita conexión a internet para cargar Bootstrap y Bootstrap Icons desde CDN.
-
 ## Estructura
 - `index.html`: página principal.
 - `css/styles.css`: personalización visual mínima.
