@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/admin-layout :: adminHead('Inicio')}"></head>
+<body class="admin-body">
+<nav th:replace="~{fragments/admin-layout :: adminNavbar}"></nav>
+<main class="container py-4">
+    <div th:replace="~{fragments/admin-layout :: adminFlash}"></div>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4"><div><span class="section-kicker">Panel</span><h1 class="fw-bold mb-0">Resumen</h1></div><a class="btn btn-primary" th:href="@{/admin/products/new}"><i class="bi bi-plus-lg me-1"></i>Nuevo producto</a></div>
+    <div class="row g-4">
+        <div class="col-12 col-md-6 col-xl-3"><div class="admin-stat-card"><span>Consultas nuevas</span><strong th:text="${newInquiryCount}">0</strong><a th:href="@{/admin/inquiries}">Ver consultas</a></div></div>
+        <div class="col-12 col-md-6 col-xl-3"><div class="admin-stat-card"><span>Total de consultas</span><strong th:text="${totalInquiryCount}">0</strong><a th:href="@{/admin/inquiries}">Ver historial</a></div></div>
+        <div class="col-12 col-md-6 col-xl-3"><div class="admin-stat-card"><span>Productos</span><strong th:text="${productCount}">0</strong><a th:href="@{/admin/products}">Administrar</a></div></div>
+        <div class="col-12 col-md-6 col-xl-3"><div class="admin-stat-card"><span>Categorías</span><strong th:text="${categoryCount}">0</strong><a th:href="@{/admin/categories}">Administrar</a></div></div>
+    </div>
+</main>
+<footer th:replace="~{fragments/admin-layout :: adminFooter}"></footer>
+<script th:replace="~{fragments/admin-layout :: adminScripts}"></script>
+</body>
+</html>

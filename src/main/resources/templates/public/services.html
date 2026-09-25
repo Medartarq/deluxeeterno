@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Servicios')}"></head>
+<body>
+<nav th:replace="~{fragments/layout :: navbar}"></nav>
+<main class="py-5">
+    <div class="container">
+        <div class="text-center mb-5"><span class="section-kicker">Servicios</span><h1 class="fw-bold">Opciones para cada celebración</h1><p class="text-secondary mx-auto section-subtitle">Elige la opción que mejor corresponda con tu ocasión y consúltanos por las alternativas disponibles.</p></div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4"><div class="feature-card h-100 p-4 rounded-4"><i class="bi bi-flower1 fs-2"></i><h2 class="h5 mt-3">Flores y arreglos</h2><p class="text-secondary mb-0">Flores naturales, eternas y arreglos para ocasiones especiales.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="feature-card h-100 p-4 rounded-4"><i class="bi bi-cup-hot fs-2"></i><h2 class="h5 mt-3">Desayunos y picnics</h2><p class="text-secondary mb-0">Desayunos sorpresa y picnics para celebrar momentos únicos.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="feature-card h-100 p-4 rounded-4"><i class="bi bi-box2-heart fs-2"></i><h2 class="h5 mt-3">Boxes y regalos personalizados</h2><p class="text-secondary mb-0">Combinaciones y detalles personalizados para personas y ocasiones especiales.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="feature-card h-100 p-4 rounded-4"><i class="bi bi-image fs-2"></i><h2 class="h5 mt-3">Cuadros y llaveros</h2><p class="text-secondary mb-0">Regalos personalizados con un detalle especial para conservar una fecha o mensaje.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="feature-card h-100 p-4 rounded-4"><i class="bi bi-briefcase fs-2"></i><h2 class="h5 mt-3">Corporativos y profesionales</h2><p class="text-secondary mb-0">Opciones para empresas, profesionales y eventos especiales.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="feature-card h-100 p-4 rounded-4"><i class="bi bi-stars fs-2"></i><h2 class="h5 mt-3">Detalles por ocasión</h2><p class="text-secondary mb-0">Ideas para cumpleaños, graduaciones, bodas y otras celebraciones.</p></div></div>
+        </div>
+        <div class="text-center mt-5"><a class="btn btn-primary btn-lg" th:href="@{/contacto}">Consultar opciones</a></div>
+    </div>
+</main>
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+<script th:replace="~{fragments/layout :: scripts}"></script>
+</body>
+</html>

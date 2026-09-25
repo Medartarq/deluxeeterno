@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Inicio')}"></head>
+<body>
+<nav th:replace="~{fragments/layout :: navbar}"></nav>
+<main>
+    <header class="hero-section d-flex align-items-center">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="badge rounded-pill text-bg-light mb-3">Detalles personalizados · Trujillo, Perú</span>
+                    <h1 class="display-4 fw-bold">Un detalle especial para cada momento.</h1>
+                    <p class="lead mt-3 mb-4">Descubre flores, arreglos, regalos personalizados y opciones para celebrar tus ocasiones especiales.</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a th:href="@{/productos}" class="btn btn-primary btn-lg px-4"><i class="bi bi-gift me-2"></i>Explorar productos</a>
+                        <a th:href="@{/contacto}" class="btn btn-outline-dark btn-lg px-4"><i class="bi bi-chat-dots me-2"></i>Hacer una consulta</a>
+                    </div>
+                    <div class="row row-cols-3 g-3 mt-4 small text-center text-sm-start">
+                        <div class="col"><strong class="d-block fs-5"><i class="bi bi-flower1"></i></strong>Flores</div>
+                        <div class="col"><strong class="d-block fs-5"><i class="bi bi-box2-heart"></i></strong>Regalos</div>
+                        <div class="col"><strong class="d-block fs-5"><i class="bi bi-stars"></i></strong>ocasiones especiales</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-card shadow-lg"><img th:src="@{/assets/hero.svg}" class="img-fluid w-100" alt="Ilustración de regalos y flores"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-kicker">Categorías</span>
+                <h2 class="fw-bold">Explora nuestras opciones</h2>
+                <p class="text-secondary mx-auto section-subtitle">Encuentra ideas para flores, regalos y celebraciones.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-3" th:each="category : ${categories}">
+                    <a class="text-decoration-none" th:href="@{/productos(categoria=${category.id})}">
+                        <article class="card category-card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-circle mx-auto mb-3"><i class="bi bi-gift"></i></div>
+                                <h3 class="h5" th:text="${category.name}">Categoría</h3>
+                                <p class="text-secondary mb-0" th:text="${category.description}">Descripción</p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-soft">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-3 mb-4">
+                <div><span class="section-kicker">Productos</span><h2 class="fw-bold mb-0">Productos y opciones</h2></div>
+                <a class="btn btn-outline-primary" th:href="@{/productos}">Ver catálogo</a>
+            </div>
+            <div class="row g-4" th:if="${!products.isEmpty()}">
+                <div class="col-12 col-md-6 col-lg-4" th:each="product : ${products}">
+                    <article class="card product-card h-100 border-0 shadow-sm">
+                        <img th:src="@{${product.imagePath}}" class="card-img-top" th:alt="${product.name}" alt="Producto">
+                        <div class="card-body">
+                            <span class="badge text-bg-light mb-2" th:text="${product.category.name}">Categoría</span>
+                            <h3 class="h5" th:text="${product.name}">Producto</h3>
+                            <p class="text-secondary" th:text="${product.description}">Descripción</p>
+                            <a class="btn btn-primary w-100" th:href="@{/productos/{id}(id=${product.id})}">Consultar opciones</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="alert alert-light border" th:if="${products.isEmpty()}">Consulta con nosotros las opciones disponibles para la ocasión que buscas.</div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-kicker">Servicios</span>
+                <h2 class="fw-bold">Opciones para cada celebración</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4"><div class="feature-card h-100 p-4 rounded-4"><i class="bi bi-flower1 fs-2"></i><h3 class="h5 mt-3">Flores y arreglos</h3><p class="text-secondary mb-0">Flores naturales, eternas y arreglos para ocasiones especiales.</p></div></div>
+                <div class="col-md-6 col-lg-4"><div class="feature-card h-100 p-4 rounded-4"><i class="bi bi-cup-hot fs-2"></i><h3 class="h5 mt-3">Desayunos y picnics</h3><p class="text-secondary mb-0">Opciones para comenzar una celebración de manera especial.</p></div></div>
+                <div class="col-md-6 col-lg-4"><div class="feature-card h-100 p-4 rounded-4"><i class="bi bi-box2-heart fs-2"></i><h3 class="h5 mt-3">Regalos personalizados</h3><p class="text-secondary mb-0">Ideas para personas y ocasiones especiales.</p></div></div>
+            </div>
+            <div class="text-center mt-4"><a class="btn btn-primary" th:href="@{/servicios}">Conoce todos los servicios</a></div>
+        </div>
+    </section>
+</main>
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+<script th:replace="~{fragments/layout :: scripts}"></script>
+</body>
+</html>

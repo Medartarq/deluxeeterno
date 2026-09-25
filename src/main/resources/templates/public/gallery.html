@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Galería')}"></head>
+<body>
+<nav th:replace="~{fragments/layout :: navbar}"></nav>
+<main class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5"><span class="section-kicker">Galería</span><h1 class="fw-bold">Ideas para tu próximo detalle</h1><p class="text-secondary mx-auto section-subtitle">Descubre opciones y realiza una consulta para conocer nuestros productos y servicios disponibles.</p></div>
+        <div class="feature-card mx-auto p-5 text-center" style="max-width: 720px;">
+            <i class="bi bi-images fs-1"></i>
+            <h2 class="h4 mt-3">Galería en actualización</h2>
+            <p class="text-secondary">Estamos preparando imágenes autorizadas para mostrar algunos de nuestros trabajos y opciones.</p>
+            <a class="btn btn-primary" th:href="@{/productos}">Consultar productos</a>
+        </div>
+    </div>
+</main>
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+<script th:replace="~{fragments/layout :: scripts}"></script>
+</body>
+</html>
